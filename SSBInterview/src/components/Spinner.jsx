@@ -8,7 +8,7 @@ const Spinner = () => {
     const username = localStorage.getItem("name");
     const surname = localStorage.getItem("surname");
 
-    fetch("http://localhost:5000/interview/start", {
+    fetch("https://ssb-interview.onrender.com/interview/start", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

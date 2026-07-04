@@ -109,7 +109,7 @@ const [question, setQuestion] = useState(
     try {
 
         const response = await fetch(
-            "http://localhost:5000/interview/next",
+            "https://ssb-interview.onrender.com/interview/next",
             {
                 method: "POST",
                 headers: {
