@@ -4,8 +4,7 @@ import interviewRoutes from "./routes/interviewRoutes.js";
 import Express from "express"
 import cors from "cors";
 
-console.log("RAW KEY:", JSON.stringify(process.env.ELEVENLABS_API_KEY))
-console.log("RAW VOICE:", JSON.stringify(process.env.ELEVENLABS_VOICE_ID))
+
 const App = Express()
 //to connnect react and express each other 
 App.use(cors());
@@ -19,6 +18,8 @@ res.send("Start Interview")
 });
 
 // start listening
-App.listen(5000, () => {
-    console.log("Server running on port 5000");
+const PORT = process.env.PORT || 5000;
+
+App.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
